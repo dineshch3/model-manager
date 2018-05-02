@@ -1,0 +1,105 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "model",
+            "otherEntityName": "model",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "timestamp",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "input",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "queryId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "outputClass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "feedbackFlag",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "feedbackClass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "feedbackValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "feedbackTimestamp",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "feedbackUser",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defaultDesc",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "errorFlag",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "errorDesc",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "errorCause",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defaultFlag",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "reasons",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "outputValue",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20180125113812",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "prediction",
+    "jpaMetamodelFiltering": true,
+    "pagination": "infinite-scroll",
+    "microserviceName": "modelmanager",
+    "searchEngine": false
+}

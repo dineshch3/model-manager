@@ -1,0 +1,10 @@
+
+  ${AnsiColor.BRIGHT_BLUE}██████╗  ██████╗  ███████╗ ██████╗ ${AnsiColor.BLUE} ███████╗ ██████╗   █████╗
+  ${AnsiColor.BRIGHT_BLUE}██╔══██╗ ██╔══██╗ ██╔════╝ ██╔══██╗${AnsiColor.BLUE} ██╔════╝ ██╔══██╗ ██╔══██╗
+  ${AnsiColor.BRIGHT_BLUE}██████╔╝ ██████╔╝ █████╗   ██║  ██║${AnsiColor.BLUE} █████╗   ██████╔╝ ███████║
+  ${AnsiColor.BRIGHT_BLUE}██╔═══╝  ██╔══██╗ ██╔══╝   ██║  ██║${AnsiColor.BLUE} ██╔══╝   ██╔══██╗ ██╔══██║
+  ${AnsiColor.BRIGHT_BLUE}██║      ██║  ██║ ███████╗ ██████╔╝${AnsiColor.BLUE} ███████╗ ██║  ██║ ██║  ██║
+  ${AnsiColor.BRIGHT_BLUE}╚═╝      ╚═╝  ╚═╝ ╚══════╝ ╚═════╝ ${AnsiColor.BLUE} ╚══════╝ ╚═╝  ╚═╝ ╚═╝  ╚═╝
+
+${AnsiColor.BRIGHT_BLUE}:: Predera :: Running Model Manager 0.8.0-SNAPSHOT ::
+:: http://www.predera.com ::${AnsiColor.DEFAULT}

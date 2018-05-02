@@ -1,0 +1,16 @@
+{
+  "name": "modelmanager",
+  "version": "0.8.0-SNAPSHOT",
+  "description": "A microservice application to manage the life cycle of a Machine Learning Model",
+  "private": true,
+  "license": "Predera Technologies",
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "devDependencies": {
+    "generator-jhipster": "4.13.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  }
+}

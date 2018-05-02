@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Prediction.
+    -->
+    <changeSet id="20180125113812-1" author="jhipster">
+        <createTable tableName="prediction">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="jhi_timestamp" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="input" type="clob">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="query_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="output_class" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="feedback_flag" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="feedback_class" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="feedback_value" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="feedback_timestamp" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="feedback_user" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="default_desc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="error_flag" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="error_desc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="error_cause" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="default_flag" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="reasons" type="clob">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="output_value" type="${floatType}">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="model_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="prediction" columnName="jhi_timestamp" columnDataType="datetime"/>
+        <dropDefaultValue tableName="prediction" columnName="feedback_timestamp" columnDataType="datetime"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>
